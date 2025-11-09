@@ -1,0 +1,32 @@
+
+### Get all users
+
+GET /api/v1/users HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Create a new User
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "batata@potato.com",
+    "password": "1234RT56",
+    "handle": "papas",
+    "name": "Kartofel",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}
+
+### Alocar Workstation (Branch 1)
+# Presume que existe uma Island com ID 1 e um User com ID 1
+POST http://localhost:8080/api/islands/1/allocate
+Content-Type: application/json
+
+{
+  "userId": 1
+}
