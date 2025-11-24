@@ -1,0 +1,72 @@
+
+### Get all users
+
+GET /api/v1/users HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Create a new User
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "bruno@potato.com",
+    "password": "1234RT56",
+    "handle": "bruno",
+    "name": "Bruno",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}
+
+### Create a new User
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "lennon@potato.com",
+    "password": "1234RT56",
+    "handle": "lennon",
+    "name": "Lennon",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}
+
+### Get all tickets
+
+GET /api/v1/tickets HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Post an valid ticket
+
+POST /api/v1/tickets HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "creatorEmail": "lennon@potato.com",
+    "assigneeEmail": "bruno@potato.com",
+    "object": "papas",
+    "action": "mudar algo",
+    "details": "coisas doidas",
+    "locality": "Kartofel"
+}
+
+
+### Update ticket status
+
+PATCH /api/v1/tickets/1 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "status": "CANCELADO"
+}
