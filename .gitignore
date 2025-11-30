@@ -1,0 +1,16 @@
+# Ignorar arquivos de build do Gradle
+.gradle/
+build/
+out/
+
+# Ignorar bancos de dados locais
+*.sqlite
+*.db
+
+# Ignorar configurações de IDE
+.vscode/
+.idea/
+*.iml
+
+# Ignorar logs
+*.log
